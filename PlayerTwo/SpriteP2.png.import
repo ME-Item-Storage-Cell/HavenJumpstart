@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5jw7yf4qd2dq"
-path="res://.godot/imported/fluid_storage_cell_256m.png-54257095a03dfe2e01983d007577a1f2.ctex"
+path="res://.godot/imported/SpriteP2.png-3fdcc110d611a81fb0fc36f5f3c6ae37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fluid_storage_cell_256m.png"
-dest_files=["res://.godot/imported/fluid_storage_cell_256m.png-54257095a03dfe2e01983d007577a1f2.ctex"]
+source_file="res://PlayerTwo/SpriteP2.png"
+dest_files=["res://.godot/imported/SpriteP2.png-3fdcc110d611a81fb0fc36f5f3c6ae37.ctex"]
 
 [params]
 
