@@ -529,10 +529,16 @@ sources/1 = SubResource("TileSetAtlasSource_lquwl")
 size = Vector2(36, 37)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pm8u8"]
-radius = 80.224686
+radius = 36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yh3p"]
+size = Vector2(35.5, 0.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh2bv"]
 size = Vector2(36, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mpft"]
+size = Vector2(36, 1)
 
 [node name="Node" type="Node" unique_id=874409677]
 
@@ -544,19 +550,20 @@ tile_set = SubResource("TileSet_pm8u8")
 script = ExtResource("1_h2yge")
 
 [node name="SpriteP1" type="Sprite2D" parent="Player 1" unique_id=126896583]
-position = Vector2(309, 476)
+position = Vector2(212, 463)
 scale = Vector2(0.22500007, 0.23125002)
 texture = ExtResource("2_h2yge")
 
 [node name="HitboxP1" type="CollisionShape2D" parent="Player 1" unique_id=66616045]
-position = Vector2(309, 475.5)
+position = Vector2(212, 462.5)
 shape = SubResource("RectangleShape2D_pm8u8")
 
 [node name="InputCounterP1" type="Label" parent="Player 1" unique_id=223989591]
-offset_left = 291.0
-offset_top = 434.0
-offset_right = 327.0
-offset_bottom = 457.0
+z_index = 1
+offset_left = 194.0
+offset_top = 421.0
+offset_right = 230.0
+offset_bottom = 444.0
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -564,26 +571,33 @@ vertical_alignment = 1
 [node name="JumpstartAreaP1" type="Area2D" parent="Player 1" unique_id=151095853]
 
 [node name="JumpstartHitboxP1" type="CollisionShape2D" parent="Player 1/JumpstartAreaP1" unique_id=879093587]
-position = Vector2(310, 475)
+position = Vector2(213, 462)
 shape = SubResource("CircleShape2D_pm8u8")
+
+[node name="JumperP1" type="Area2D" parent="Player 1" unique_id=1141018304]
+
+[node name="JumperHitboxP1" type="CollisionShape2D" parent="Player 1/JumperP1" unique_id=748728314]
+position = Vector2(212, 483)
+shape = SubResource("RectangleShape2D_4yh3p")
 
 [node name="Player 2" type="CharacterBody2D" parent="." unique_id=384109991 groups=["Players", "players"]]
 script = ExtResource("4_lquwl")
 
 [node name="SpriteP2" type="Sprite2D" parent="Player 2" unique_id=279578956]
-position = Vector2(388, 480)
+position = Vector2(127, 461)
 scale = Vector2(2.2500002, 2.3750002)
 texture = ExtResource("5_7mycd")
 
 [node name="HitboxP2" type="CollisionShape2D" parent="Player 2" unique_id=2146478970]
-position = Vector2(388, 479.5)
+position = Vector2(127, 460.5)
 shape = SubResource("RectangleShape2D_uh2bv")
 
 [node name="InputCounterP2" type="Label" parent="Player 2" unique_id=1298267403]
-offset_left = 370.0
-offset_top = 438.0
-offset_right = 406.0
-offset_bottom = 461.0
+z_index = 1
+offset_left = 109.0
+offset_top = 419.0
+offset_right = 145.0
+offset_bottom = 442.0
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -591,10 +605,20 @@ vertical_alignment = 1
 [node name="JumpstartAreaP2" type="Area2D" parent="Player 2" unique_id=1800079665]
 
 [node name="JumpstartHitboxP2" type="CollisionShape2D" parent="Player 2/JumpstartAreaP2" unique_id=1876004784]
-position = Vector2(387, 479)
+position = Vector2(126, 460)
 shape = SubResource("CircleShape2D_pm8u8")
+
+[node name="JumperP2" type="Area2D" parent="Player 2" unique_id=1416708188]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 2/JumperP2" unique_id=1133988999]
+position = Vector2(127, 481)
+shape = SubResource("RectangleShape2D_5mpft")
 
 [connection signal="body_entered" from="Player 1/JumpstartAreaP1" to="Player 2" method="_on_jumpstart_area_p_1_body_entered"]
 [connection signal="body_exited" from="Player 1/JumpstartAreaP1" to="Player 2" method="_on_jumpstart_area_p_1_body_exited"]
+[connection signal="body_entered" from="Player 1/JumperP1" to="Player 2" method="_on_jumper_p_1_body_entered"]
+[connection signal="body_exited" from="Player 1/JumperP1" to="Player 2" method="_on_jumper_p_1_body_exited"]
 [connection signal="body_entered" from="Player 2/JumpstartAreaP2" to="Player 1" method="_on_jumpstart_area_p_2_body_entered"]
 [connection signal="body_exited" from="Player 2/JumpstartAreaP2" to="Player 1" method="_on_jumpstart_area_p_2_body_exited"]
+[connection signal="body_entered" from="Player 2/JumperP2" to="Player 1" method="_on_jumper_p_2_body_entered"]
+[connection signal="body_exited" from="Player 2/JumperP2" to="Player 1" method="_on_jumper_p_2_body_exited"]
