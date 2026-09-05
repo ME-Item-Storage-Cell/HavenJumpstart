@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x1opmd2y622u"
-path="res://.godot/imported/TilesetPlaceholder.png-bfdd2cfa0d8f2bd385231517e393b46a.ctex"
+uid="uid://vaal8nbgw4s3"
+path="res://.godot/imported/ForegroundTileAtlas.png-6e277ae9c5c9ee0a030d5fb0f7a79fde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilesetPlaceholder.png"
-dest_files=["res://.godot/imported/TilesetPlaceholder.png-bfdd2cfa0d8f2bd385231517e393b46a.ctex"]
+source_file="res://TileAtlas/ForegroundTileAtlas.png"
+dest_files=["res://.godot/imported/ForegroundTileAtlas.png-6e277ae9c5c9ee0a030d5fb0f7a79fde.ctex"]
 
 [params]
 

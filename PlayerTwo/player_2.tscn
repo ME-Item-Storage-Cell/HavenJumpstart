@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://d1spc2o4irma"]
+
+[ext_resource type="Script" uid="uid://c6fyktjfgn48i" path="res://PlayerTwo/MovementP2.gd" id="1_ufh5k"]
+[ext_resource type="Texture2D" uid="uid://b5jw7yf4qd2dq" path="res://PlayerTwo/SpriteP2.png" id="2_x3sgo"]
+[ext_resource type="Script" uid="uid://c5b4kksc4eip1" path="res://PlayerTwo/hurt_box_p_2.gd" id="3_ryqyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh2bv"]
+size = Vector2(16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pm8u8"]
+radius = 13.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mpft"]
+size = Vector2(16, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_768sh"]
+size = Vector2(18, 18)
+
+[sub_resource type="GDScript" id="GDScript_272bh"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
+[node name="Player 2" type="CharacterBody2D" unique_id=1963623619 groups=["Players", "players"]]
+script = ExtResource("1_ufh5k")
+
+[node name="SpriteP2" type="Sprite2D" parent="." unique_id=1134585387]
+position = Vector2(520, 360)
+scale = Vector2(0.9999995, 1.000001)
+texture = ExtResource("2_x3sgo")
+
+[node name="HitboxP2" type="CollisionShape2D" parent="." unique_id=2067691607]
+position = Vector2(520, 360)
+shape = SubResource("RectangleShape2D_uh2bv")
+
+[node name="InputCounterP2" type="Label" parent="." unique_id=1789357133]
+z_index = 1
+offset_left = 511.0
+offset_top = 328.0
+offset_right = 530.0
+offset_bottom = 351.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JumpstartAreaP2" type="Area2D" parent="." unique_id=1458728229]
+
+[node name="JumpstartHitboxP2" type="CollisionShape2D" parent="JumpstartAreaP2" unique_id=310039573]
+position = Vector2(520, 360)
+shape = SubResource("CircleShape2D_pm8u8")
+
+[node name="JumperP2" type="Area2D" parent="." unique_id=362617389]
+
+[node name="JumperHitboxP2" type="CollisionShape2D" parent="JumperP2" unique_id=2008448620]
+position = Vector2(520, 368.25)
+shape = SubResource("RectangleShape2D_5mpft")
+debug_color = Color(9.62615e-07, 0.65090144, 0.081968434, 0.41960785)
+
+[node name="HurtBoxP2" type="Area2D" parent="." unique_id=762939731]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_ryqyf")
+
+[node name="HurtAreaP2" type="CollisionShape2D" parent="HurtBoxP2" unique_id=492238694]
+position = Vector2(520, 360)
+shape = SubResource("RectangleShape2D_768sh")
+debug_color = Color(0.96550184, 0.13282615, 0.3408322, 0.41960785)
+script = SubResource("GDScript_272bh")

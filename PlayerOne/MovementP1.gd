@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -350.0
 const DRAG = 0.25
 const ACCEL = 0.10
-const DECCEL = 20
+const DECCEL = 15
 
 var inputCount = 10
 var inRange = false
 var satOn = false
 @onready var inputCounter = $InputCounterP1
-@onready var playerTwo = get_node("../Player 2")
+@onready var playerTwo = $"../Player2"
 
 func _physics_process(delta: float) -> void:
 	
@@ -48,12 +48,14 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jumpstartone") and inRange and playerTwo.inputCount == 0 and inputCount != 0:
 		playerTwo.inputCount = 10
+		
+func _on_jumpstart_area_p_2_body_entered(body: Node2D) -> void:
+	if body == self:
+		inRange = true
 
-func _on_jumpstart_area_p_2_body_entered(_body: Node2D) -> void:
-	inRange = true
-
-func _on_jumpstart_area_p_2_body_exited(_body: Node2D) -> void:
-	inRange = false
+func _on_jumpstart_area_p_2_body_exited(body: Node2D) -> void:
+	if body == self:
+		inRange = false
 
 func _on_jumper_p_2_body_entered(body: Node2D) -> void:
 	if body == self:

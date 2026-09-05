@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 150.0
+const JUMP_VELOCITY = -350.0
 const DRAG = 0.25
 const ACCEL = 0.10
-const DECCEL = 20
+const DECCEL = 15
 
 var inputCount = 10
 var inRange = false
 var satOn = false
 @onready var inputCounter = $InputCounterP2
-@onready var playerOne = get_node("../Player 1")
+@onready var playerOne = $"../Player1"
 
 func _physics_process(delta: float) -> void:
 	
@@ -43,18 +43,19 @@ func _physics_process(delta: float) -> void:
 			if collider == playerOne:
 				position.x += direction * SPEED * delta
 				
-	if ((Input.is_action_just_released("lefttwo") or Input.is_action_just_released("righttwo")) or (Input.is_action_just_pressed("jumptwo") and not satOn)) and inputCount > 0:
+	if ((Input.is_action_just_released("lefttwo") or Input.is_action_just_released("righttwo")) or (Input.is_action_just_released("jumptwo") and not satOn)) and inputCount > 0:
 		inputCount -= 1
 
 	if Input.is_action_just_pressed("jumpstarttwo") and inRange and playerOne.inputCount == 0 and inputCount > 0:
 		playerOne.inputCount = 10	
 
+func _on_jumpstart_area_p_1_body_entered(body: Node2D) -> void:
+	if body == self:
+		inRange = true
 
-func _on_jumpstart_area_p_1_body_entered(_body: Node2D) -> void:
-	inRange = true
-
-func _on_jumpstart_area_p_1_body_exited(_body: Node2D) -> void:
-	inRange = false
+func _on_jumpstart_area_p_1_body_exited(body: Node2D) -> void:
+	if body == self:
+		inRange = false
 
 func _on_jumper_p_1_body_entered(body: Node2D) -> void:
 	if body == self:
