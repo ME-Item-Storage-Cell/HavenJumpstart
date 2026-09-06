@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dww81rcta22ft"]
 
-[ext_resource type="Script" uid="uid://cb6r7486w4dbm" path="res://Levels/main.gd" id="1_7pswh"]
+[ext_resource type="Script" uid="uid://cb6r7486w4dbm" path="res://Levels/Testing/main.gd" id="1_7pswh"]
 [ext_resource type="Texture2D" uid="uid://vaal8nbgw4s3" path="res://TileAtlas/ForegroundTileAtlas.png" id="3_ovrsl"]
 [ext_resource type="PackedScene" uid="uid://c0gefu6fk8xat" path="res://PlayerOne/player_1.tscn" id="4_hbaan"]
 [ext_resource type="PackedScene" uid="uid://d1spc2o4irma" path="res://PlayerTwo/player_2.tscn" id="5_he5fp"]
