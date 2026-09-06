@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 			if collider == playerOne:
 				position.x += direction * SPEED * delta
 				
-	if ((Input.is_action_just_released("lefttwo") or Input.is_action_just_released("righttwo")) or (Input.is_action_just_released("jumptwo") and not satOn)) and inputCount > 0:
+	if ((Input.is_action_just_released("lefttwo") or Input.is_action_just_released("righttwo")) or (Input.is_action_just_pressed("jumptwo") and not satOn)) and inputCount > 0:
 		inputCount -= 1
 
 	if Input.is_action_just_pressed("jumpstarttwo") and inRange and playerOne.inputCount == 0 and inputCount > 0:
