@@ -1,0 +1,26 @@
+[gd_resource type="TileSet" format=3 uid="uid://cgk3pwdwbb3yk"]
+
+[ext_resource type="Texture2D" uid="uid://vaal8nbgw4s3" path="res://TileAtlas/ForegroundTileAtlas.png" id="1_jgrks"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kek77"]
+resource_name = "Foreground"
+texture = ExtResource("1_jgrks")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(0, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/size_in_atlas = Vector2i(2, 2)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -8)
+2:1/0/physics_layer_2/polygon_0/points = PackedVector2Array(-11.789339, -2.2304153, 8, -1.593153, 7.9568853, 23.965382, -11.509066, 24.012745)
+
+[resource]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 2
+physics_layer_1/collision_mask = 0
+physics_layer_2/collision_layer = 4
+physics_layer_2/collision_mask = 0
+sources/3 = SubResource("TileSetAtlasSource_kek77")
