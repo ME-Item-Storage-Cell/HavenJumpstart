@@ -14,7 +14,7 @@ radius = 13.038404
 size = Vector2(16, 0.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7k1k"]
-size = Vector2(18, 18)
+size = Vector2(16, 16)
 
 [node name="Player 1" type="CharacterBody2D" unique_id=1574365858 groups=["Players", "players"]]
 script = ExtResource("1_qh3su")
