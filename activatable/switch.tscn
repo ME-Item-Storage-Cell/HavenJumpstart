@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dut2njxqcet03"]
+
+[ext_resource type="Script" uid="uid://evekc75ew5x6" path="res://activatable/switch.gd" id="1_58ns6"]
+[ext_resource type="Texture2D" uid="uid://b5jw7yf4qd2dq" path="res://PlayerTwo/SpriteP2.png" id="2_nvx66"]
+[ext_resource type="Texture2D" uid="uid://bfew1w2rph17k" path="res://PlayerOne/SpriteP1.png" id="3_7trv1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pm8u8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvx66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7trv1")
+}],
+"loop": 0,
+"name": &"activate",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm8u8"]
+size = Vector2(16, 16)
+
+[node name="Switch" type="Node2D" unique_id=46560094]
+script = ExtResource("1_58ns6")
+
+[node name="SpriteButton" type="AnimatedSprite2D" parent="." unique_id=1069872727]
+sprite_frames = SubResource("SpriteFrames_pm8u8")
+animation = &"activate"
+
+[node name="AreaButton" type="Area2D" parent="." unique_id=1234809465]
+
+[node name="HitboxButton" type="CollisionShape2D" parent="AreaButton" unique_id=953648571]
+shape = SubResource("RectangleShape2D_pm8u8")
+
+[connection signal="body_entered" from="AreaButton" to="." method="_on_area_button_body_entered"]
+[connection signal="body_exited" from="AreaButton" to="." method="_on_area_button_body_exited"]
