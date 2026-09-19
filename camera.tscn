@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://byrtaodtsrrs1"]
+
+[ext_resource type="Script" uid="uid://da414tcwevvt" path="res://Levels/Testing/camera_2d.gd" id="1_u5kg4"]
+
+[node name="Camera2D" type="Camera2D" unique_id=1919898489]
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
+script = ExtResource("1_u5kg4")
+smooth_speed = 4.0
+vertical_smooth_speed = 20.0

@@ -20,20 +20,19 @@ size = Vector2(16, 16)
 script = ExtResource("1_qh3su")
 
 [node name="SpriteP1" type="Sprite2D" parent="." unique_id=897459034]
-position = Vector2(22, 32)
 scale = Vector2(0.99999934, 1.0000002)
 texture = ExtResource("2_buxg0")
 
 [node name="HitboxP1" type="CollisionShape2D" parent="." unique_id=392451561]
-position = Vector2(22, 32)
 shape = SubResource("RectangleShape2D_pm8u8")
 debug_color = Color(0, 0, 0, 0.41960785)
 
 [node name="InputCounterP1" type="Label" parent="." unique_id=1851989888]
 z_index = 1
-offset_left = 12.0
-offset_right = 31.0
-offset_bottom = 23.0
+offset_left = -10.0
+offset_top = -32.0
+offset_right = 9.0
+offset_bottom = -9.0
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -42,13 +41,12 @@ metadata/_edit_use_anchors_ = true
 [node name="JumpstartAreaP1" type="Area2D" parent="." unique_id=421616901]
 
 [node name="JumpstartHitboxP1" type="CollisionShape2D" parent="JumpstartAreaP1" unique_id=1343861750]
-position = Vector2(22, 32)
 shape = SubResource("CircleShape2D_pm8u8")
 
 [node name="JumperP1" type="Area2D" parent="." unique_id=293825416]
 
 [node name="JumperHitboxP1" type="CollisionShape2D" parent="JumperP1" unique_id=1282386710]
-position = Vector2(22, 40.25)
+position = Vector2(0, 8.25)
 shape = SubResource("RectangleShape2D_4yh3p")
 
 [node name="HurtBoxP1" type="Area2D" parent="." unique_id=1271653919]
@@ -57,6 +55,5 @@ collision_mask = 2
 script = ExtResource("3_6736r")
 
 [node name="HurtAreaP1" type="CollisionShape2D" parent="HurtBoxP1" unique_id=990286490]
-position = Vector2(22, 32)
 shape = SubResource("RectangleShape2D_w7k1k")
 debug_color = Color(0.88766474, 0.27569023, 0.46938783, 0.41960785)

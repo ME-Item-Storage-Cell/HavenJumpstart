@@ -10,7 +10,7 @@ var inputCount = 10
 var inRange = false
 var satOn = false
 @onready var inputCounter = $InputCounterP1
-@onready var playerTwo = $"../Player2"
+@export var playerTwo = Node2D
 
 func _physics_process(delta: float) -> void:
 	
@@ -64,3 +64,8 @@ func _on_jumper_p_2_body_entered(body: Node2D) -> void:
 func _on_jumper_p_2_body_exited(body: Node2D) -> void:
 	if body == self:
 		satOn = false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body == self:
+		get_tree().call_deferred("change_scene_to_file", "res://Levels/1.tscn")
