@@ -17,6 +17,7 @@ size = Vector2(16, 0.5)
 size = Vector2(16, 16)
 
 [node name="Player 1" type="CharacterBody2D" unique_id=1574365858 groups=["Players", "players"]]
+z_index = 100
 script = ExtResource("1_qh3su")
 
 [node name="SpriteP1" type="Sprite2D" parent="." unique_id=897459034]
@@ -33,10 +34,10 @@ offset_left = -10.0
 offset_top = -32.0
 offset_right = 9.0
 offset_bottom = -9.0
+theme_override_font_sizes/font_size = 16
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="JumpstartAreaP1" type="Area2D" parent="." unique_id=421616901]
 

@@ -70,8 +70,9 @@ connectedObject = NodePath("../Door")
 
 [node name="Door" parent="." unique_id=1909886309 instance=ExtResource("7_ywowl")]
 position = Vector2(370, 168)
-distanceMovedX = 10
-distanceMovedY = 10
+distanceMovedX = -10
+distanceMovedY = -10
+speed = 10.0
 
 [node name="Sprite2D" parent="Door" index="0" unique_id=2061512829]
 texture = ExtResource("8_ew5an")

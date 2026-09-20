@@ -9,6 +9,6 @@ limit_right = 1152
 limit_bottom = 648
 script = ExtResource("1_u5kg4")
 min_zoom = 1.0
-max_zoom = 1.3
+max_zoom = 2.0
 smooth_speed = 8.0
 vertical_smooth_speed = 20.0

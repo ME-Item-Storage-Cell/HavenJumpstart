@@ -19,19 +19,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm8u8"]
-size = Vector2(16, 16)
+size = Vector2(16, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh2bv"]
+size = Vector2(16, 3)
 
 [node name="Switch" type="Node2D" unique_id=46560094]
+z_index = -1
 script = ExtResource("1_58ns6")
 
 [node name="SpriteButton" type="AnimatedSprite2D" parent="." unique_id=1069872727]
+z_index = -1
 sprite_frames = SubResource("SpriteFrames_pm8u8")
 animation = &"activate"
 
 [node name="AreaButton" type="Area2D" parent="." unique_id=1234809465]
 
 [node name="HitboxButton" type="CollisionShape2D" parent="AreaButton" unique_id=953648571]
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_pm8u8")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=199718505]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1428777820]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_uh2bv")
 
 [connection signal="body_entered" from="AreaButton" to="." method="_on_area_button_body_entered"]
 [connection signal="body_exited" from="AreaButton" to="." method="_on_area_button_body_exited"]

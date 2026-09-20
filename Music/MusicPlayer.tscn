@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dyu8axpd602lr"]
+
+[ext_resource type="AudioStream" uid="uid://bbawy8q0rmnfm" path="res://Music/Portal Radio Tune.mp3" id="1_ux2so"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=872265549]
+stream = ExtResource("1_ux2so")
+volume_db = -9.301
+autoplay = true

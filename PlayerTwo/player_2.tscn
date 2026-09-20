@@ -31,6 +31,7 @@ func _process(_delta: float) -> void:
 "
 
 [node name="Player 2" type="CharacterBody2D" unique_id=1963623619 groups=["Players", "players"]]
+z_index = 100
 script = ExtResource("1_ufh5k")
 
 [node name="SpriteP2" type="Sprite2D" parent="." unique_id=1134585387]
