@@ -13,7 +13,6 @@ func _ready() -> void:
 	
 
 func activate(boolean: bool):
-	print("check")
 	if boolean:
 		targetPos = starPos + Vector2(distanceMovedX, distanceMovedY)
 	else:
