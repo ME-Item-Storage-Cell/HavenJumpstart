@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dut2njxqcet03"]
 
 [ext_resource type="Script" uid="uid://evekc75ew5x6" path="res://activatable/switch.gd" id="1_58ns6"]
-[ext_resource type="Texture2D" uid="uid://b5jw7yf4qd2dq" path="res://PlayerTwo/SpriteP2.png" id="2_nvx66"]
-[ext_resource type="Texture2D" uid="uid://bfew1w2rph17k" path="res://PlayerOne/SpriteP1.png" id="3_7trv1"]
+[ext_resource type="Texture2D" uid="uid://cpy3xo6srnhb2" path="res://activatable/ButtonBlue.png" id="2_58ns6"]
+[ext_resource type="Texture2D" uid="uid://bh0coq814fdln" path="res://activatable/ButtonDown.png" id="3_nvx66"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pm8u8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_nvx66")
+"texture": ExtResource("2_58ns6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_7trv1")
+"texture": ExtResource("3_nvx66")
 }],
 "loop": 0,
 "name": &"activate",
@@ -19,10 +19,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm8u8"]
-size = Vector2(16, 13)
+size = Vector2(12, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh2bv"]
-size = Vector2(16, 3)
+size = Vector2(16, 2)
 
 [node name="Switch" type="Node2D" unique_id=46560094]
 z_index = -1
@@ -36,13 +36,13 @@ animation = &"activate"
 [node name="AreaButton" type="Area2D" parent="." unique_id=1234809465]
 
 [node name="HitboxButton" type="CollisionShape2D" parent="AreaButton" unique_id=953648571]
-position = Vector2(0, -1.5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_pm8u8")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=199718505]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1428777820]
-position = Vector2(0, 6.5)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_uh2bv")
 
 [connection signal="body_entered" from="AreaButton" to="." method="_on_area_button_body_entered"]

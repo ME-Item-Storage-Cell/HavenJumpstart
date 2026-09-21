@@ -7,10 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://byrtaodtsrrs1" path="res://camera.tscn" id="5_3ba40"]
 [ext_resource type="PackedScene" uid="uid://dut2njxqcet03" path="res://activatable/switch.tscn" id="6_knlbq"]
 [ext_resource type="PackedScene" uid="uid://be7t48fbuwt3p" path="res://activatable/door.tscn" id="7_ywowl"]
-[ext_resource type="Texture2D" uid="uid://b5jw7yf4qd2dq" path="res://PlayerTwo/SpriteP2.png" id="8_ew5an"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm8u8"]
 size = Vector2(22, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6x8xg"]
+load_path = "res://.godot/imported/SpriteP2.png-3fdcc110d611a81fb0fc36f5f3c6ae37.ctex"
 
 [node name="TestingScene" type="Node" unique_id=874409677 node_paths=PackedStringArray("spawnPointP1", "player1", "spawnPointP2", "player2")]
 script = ExtResource("1_ohu4d")
@@ -72,10 +74,10 @@ connectedObject = NodePath("../Door")
 position = Vector2(370, 168)
 distanceMovedX = -10
 distanceMovedY = -10
-speed = 10.0
+speed = 1000.0
 
 [node name="Sprite2D" parent="Door" index="0" unique_id=2061512829]
-texture = ExtResource("8_ew5an")
+texture = SubResource("CompressedTexture2D_6x8xg")
 
 [connection signal="body_entered" from="Player1/JumpstartAreaP1" to="Player2" method="_on_jumpstart_area_p_1_body_entered"]
 [connection signal="body_exited" from="Player1/JumpstartAreaP1" to="Player2" method="_on_jumpstart_area_p_1_body_exited"]
