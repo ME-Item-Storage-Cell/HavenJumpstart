@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://ireu2aysnrne" path="res://activatable/ButtonWhite.png" id="17_w4pr6"]
 [ext_resource type="Texture2D" uid="uid://d36x7ih1u55vm" path="res://activatable/DoorWhite.png" id="18_hpw18"]
 [ext_resource type="Texture2D" uid="uid://cnlw77bv7lwpa" path="res://activatable/DoorPurple.png" id="19_lawk8"]
-[ext_resource type="Texture2D" uid="uid://ceyvcgedjq8di" path="res://activatable/ButtonPurple.png" id="20_dl1jf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8tbp"]
 size = Vector2(37, 96)
@@ -66,11 +65,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hpw18"]
+load_path = "res://.godot/imported/ButtonPurple.png-28eec96797d570da59d7100fb662b0b3.ctex"
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qew4n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_dl1jf")
+"texture": SubResource("CompressedTexture2D_hpw18")
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_xmgfc")

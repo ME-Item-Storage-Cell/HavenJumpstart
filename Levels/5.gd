@@ -24,6 +24,6 @@ func _on_goal_body_entered(body: Node2D) -> void:
 		get_tree().call_deferred("change_scene_to_file", "res://Levels/credits.tscn")
 
 
-func _on_relief_body_entered(body: Node2D) -> void:
+func _on_relief_body_entered(_body: Node2D) -> void:
 	player1.inputCount = 10
 	player2.inputCount = 10
