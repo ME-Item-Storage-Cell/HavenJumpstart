@@ -26,4 +26,6 @@ If you are too lazy to play the game locally, you can also play it on itch.io [h
 ## AI Disclosure
 No AI was used for the creation of this super awesome super cool game.
 
+This game also won me some cow piss from my friend, so fun fact ig.
+
 <sub> Small Godot game made for Haven Jumpstart!. Credits in game. </sub>
